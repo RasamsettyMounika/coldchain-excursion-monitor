@@ -1,0 +1,6 @@
+anomaly_id,category,target_table,target_record_id,description,expected_decision
+GT-ANOM-001,OUT_OF_PHYSICAL_RANGE,SensorReading,RDG-SNS-CNT-000008-TEMP-1791042600,Injected impossible temperature reading -95.0C (original: 4.94). Expect sensor hardware failure flag.,FLAG_SENSOR_FAULT
+GT-ANOM-002,MISSING_INTERVAL_INTERPRETED_AS_SAFE,SensorReading,SHP-2026-000002,Dropped telemetry sequence window to test gap audit rule instead of assuming safe compliance.,FLAG_TELEMETRY_GAP
+GT-ANOM-003,DELIVERED_BEFORE_DEPARTURE,Shipment,SHP-2026-000003,Delivery timestamp set prior to departure timestamp to test temporal ordering validator.,REJECT_RECORD_TEMPORAL_VIOLATION
+GT-ANOM-004,WRONG_PRODUCT_THRESHOLD_APPLIED,Shipment,SHP-2026-000004,Assigned mismatched threshold policy ID to test policy-product reconciliation check.,FLAG_POLICY_MISMATCH
+GT-ANOM-005,EXCURSION_DURATION_UNDERCOUNTED,Excursion,EXC-2026-000001,Simulated operator edge case where brief recovery dips were incorrectly subtracted from total breach duration.,CORRECT_DURATION_CALCULATION

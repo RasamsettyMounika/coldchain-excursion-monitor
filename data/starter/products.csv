@@ -1,0 +1,5 @@
+product_id,product_name,category,default_storage_type
+PRD-0001,mRNA Covid Vaccine,VACCINES,FROZEN
+PRD-0002,Insulin Glargine,BIOLOGICS,REFRIGERATED
+PRD-0003,Fresh Organic Avocados,FRESH_PRODUCE,AMBIENT
+PRD-0004,Monoclonal Antibodies,PHARMA,REFRIGERATED
